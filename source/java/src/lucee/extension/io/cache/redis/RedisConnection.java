@@ -36,8 +36,8 @@ public class RedisConnection {
 			Integer port = caster.toInteger(hosts.split(":")[1]);
 
 			Integer setMaxTotal = caster.toInteger(arguments.get("setMaxTotal"),128);
-			Integer setMaxIdle = caster.toInteger(arguments.get("namespace"),128);
-			Integer setMinIdle = caster.toInteger(arguments.get("namespace"),16);
+			Integer setMaxIdle = caster.toInteger(arguments.get("setMaxIdle"),128);
+			Integer setMinIdle = caster.toInteger(arguments.get("setMinIdle"),16);
 			Integer setMinEvictableIdleTimeMillis = caster.toInteger(arguments.get("setMinEvictableIdleTimeMillis"),60000);
 			Integer setTimeBetweenEvictionRunsMillis = caster.toInteger(arguments.get("setTimeBetweenEvictionRunsMillis"),30000);
 			Integer setNumTestsPerEvictionRun = caster.toInteger(arguments.get("setNumTestsPerEvictionRun"),3);
